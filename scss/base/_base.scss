@@ -1,0 +1,32 @@
+
+body {
+  font-family: 'Fjalla One', sans-serif;
+  background-color: $background;
+  color: white;
+}
+
+h2{
+  font-size: 250%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  line-height: 1.25em;
+}
+
+h3{
+  font-size: 150%;
+  line-height: 2em;
+}
+
+@media (max-width: 768px) {
+  h2{
+    font-size: 200%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.25em;
+  }
+
+  h3{
+    font-size: 125%;
+    line-height: 2em;
+  }
+}
