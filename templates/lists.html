@@ -1,1 +1,19 @@
-Display All Christmas Lists
+<div class="container text-center">
+  <h2>Display All Christmas Lists</h2>
+</div>
+
+<div class="container" ng-controller="giftsController as gifts">
+  <div class="container col-lg-6" ng-repeat="individual in gifts.recipients">
+    <h3>{{individual.name}}</h3><br>
+
+    <div ng-repeat="name in individual.wishlist">
+      <p>
+        {{name.gift1}}
+        {{name.gift2}}
+        {{name.gift3}}
+        {{name.gift4}}
+        {{name.gift5}}
+      </p>
+    </div>
+  </div>
+</div>
