@@ -5,15 +5,8 @@
 <div class="container" ng-controller="giftsController as gifts">
   <div class="container col-lg-6" ng-repeat="individual in gifts.recipients">
     <h3>{{individual.name}}</h3><br>
-
-    <div ng-repeat="name in individual.wishlist">
-      <p>
-        {{name.gift1}}
-        {{name.gift2}}
-        {{name.gift3}}
-        {{name.gift4}}
-        {{name.gift5}}
-      </p>
+    <div ng-repeat="peep in individual.wishlist">
+        <div>{{peep.gift}}<span ng-show="peep.isBought"><p>Purchased</p></span></div>
     </div>
   </div>
 </div>
