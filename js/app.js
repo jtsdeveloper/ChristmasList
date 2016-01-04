@@ -1,6 +1,6 @@
 var app = angular.module('app', ['ui.router'])
 
-  .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,$stateProvider){
+  app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,$stateProvider){
       $urlRouterProvider.otherwise('/');
 
       $stateProvider
@@ -24,30 +24,25 @@ var app = angular.module('app', ['ui.router'])
     this.recipients = persons;
   })
 
-
 var persons = [
 
   {
     name: "Jeremy",
     wishlist: [
       {
-        gift1: "basketball",
-        isBought: false
-      },
-      {
-        gift2: "snacks",
+        gift: "basketball",
         isBought: true
       },
       {
-        gift3: "shoes",
+        gift: "snacks",
         isBought: false
       },
       {
-        gift4: "DVD",
-        isBought: false
+        gift: "shoes",
+        isBought: true
       },
       {
-        gift5: "truck",
+        gift: "DVD",
         isBought: false
       }
     ]
@@ -57,52 +52,15 @@ var persons = [
     name: "Karl",
     wishlist: [
       {
-        gift1: "basketball",
+        gift: "basketball",
         isBought: false
       },
       {
-        gift2: "snacks",
+        gift: "snacks",
         isBought: true
-      },
-      {
-        gift3: "shoes",
-        isBought: false
-      },
-      {
-        gift4: "DVD",
-        isBought: false
-      },
-      {
-        gift5: "truck",
-        isBought: false
-      }
-    ]
-  },
-
-  {
-    name: "Malone",
-    wishlist: [
-      {
-        gift1: "basketball",
-        isBought: false
-      },
-      {
-        gift2: "snacks",
-        isBought: true
-      },
-      {
-        gift3: "shoes",
-        isBought: false
-      },
-      {
-        gift4: "DVD",
-        isBought: false
-      },
-      {
-        gift5: "truck",
-        isBought: false
       }
     ]
   }
+
 
 ]
