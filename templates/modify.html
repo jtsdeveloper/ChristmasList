@@ -1,3 +1,17 @@
-<p style="color: white;">
-  MODIFY A LIST!!
-</p>
+<div class="container text-center">
+  <h2>Modify a List</h2>
+</div>
+
+<div ng-controller="giftsController as gifts">
+  <form name="myForm">
+    <label> Chose Name: </label>
+    <select name="name" ng-model="selectedname">
+      <option ng-repeat="individual in gifts.recipients" value="{{individual.name}}">{{individual.name}}</option>
+    </select>
+
+    <div ng-bind="selectedname" ng-controller="giftsController as gifts">
+      {{individual.name}}
+      <div ng-repeat="present in gifts.individual.name">{{present.gift}}</div>
+    </div>
+  </form>
+</div>
