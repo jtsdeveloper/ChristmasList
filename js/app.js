@@ -20,7 +20,7 @@ var app = angular.module('app', ['ui.router'])
         })
   }])
 
-  app.controller('giftsController', function(){
+  app.controller('giftsController', function(){       //Main controller for app
     this.recipients = persons;
   })
 
