@@ -3,10 +3,14 @@
 </div>
 
 <div class="container" ng-controller="giftsController as gifts">
-  <div class="container col-lg-6" ng-repeat="individual in gifts.recipients">
-    <h3>{{individual.name}}</h3><br>
-    <div ng-repeat="peep in individual.wishlist">
-        <div>{{peep.gift}}<span ng-show="peep.isBought"><p>Purchased</p></span></div>
+  <div class="row row-eq-height">
+    <div class="container col-lg-6 listbox" ng-repeat="individual in gifts.recipients">
+      <div>
+        <h2>{{individual.name}}</h2><br>
+        <div ng-repeat="peep in individual.wishlist">
+           <div><h3 style="display: inline;">{{peep.gift}}</h3><span ng-show="peep.isBought" style="margin-left:60px;">Purchased</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
